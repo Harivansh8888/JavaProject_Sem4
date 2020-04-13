@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>New ToDo Details Submission</title>
 </head>
 <body>
 
      <form action="addDB.jsp"  method="post">
       
         Enter the To Do : <input type="text" name="todo"><br>
-        Enter the date for completion : <input type="text" name="date"><br>
-        Enter the time for completion : <input type="text" name="time"><br>
+        Enter the date for completion (Format example : 5 June 2000) : <input type="text" name="date"><br>
+        Enter the time for completion (Format example : 1:30pm ) : <input type="text" name="time"><br>
         <input type="submit">
       
       </form>
