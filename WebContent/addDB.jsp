@@ -18,6 +18,7 @@
    Connection con =null;     
    PreparedStatement pst =null;
    Statement st =null;
+   ResultSet rs = null;
    
    //Login to database details   
    String url ="jdbc:mysql://localhost:3306/aliens";
@@ -26,7 +27,7 @@
 
   //SQL Queries to be implemented
   String query1="insert into todolist values(?,?,?)"; //insert values
-  String query2="select * from employee"; //showing values        
+  String query2="select * from todolist"; //showing values        
   %>
 
 <%
@@ -37,18 +38,40 @@
   //out.print(todo);
   
   
-  //Initializations
+  //Initializations =
+  
+  //1.General initializations
   Class.forName("com.mysql.jdbc.Driver"); //class forname
   con = DriverManager.getConnection(url, uname, pass);
+  
+  //Query1 initializations 
   pst = con.prepareStatement(query1);
   pst.setString(1, todo);
   pst.setString(2, date);
   pst.setString(3, time);
   int count = pst.executeUpdate();
   
+  //Query2 initializations
+  st = con.createStatement();
+  rs =st.executeQuery(query2);
+  
+ 
 
 %>
 
+   ToDo's Are : <br>
+   ToDo     Date      Time <br> 
+   
+   
+   <%
+     while(rs.next()){
+		
+		String ToDoData = rs.getString(1) + rs.getString(2) +rs.getString(3)+" \r\n ";
+		out.println(ToDoData+"<br/>");
+		//printing all the entries in database
+	}%>
+	
+	
    Number of rows affected is : <%= count %> <!--Expression tag  -->
 
 </body>
