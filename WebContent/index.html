@@ -3,25 +3,32 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>To Do App</title>
- 
-  <h1>A To Do WebApp</h1>
-  </br>
+<link rel="stylesheet" href="styles.css">
+  
   <!--Current day and time display(Pending)-->
 </head>
 <body>
+<div class="container">
+  <div class="textdiv">
+    <h1 class="main-heading">To-Do WebApp</h1>
 
-
-   <p>You would like to start with :</p>
-   </br>
+    <p>What would you like to start with</p>
+  
+  </div>
    
    
-   <a href="add.jsp"><img src="images/add.svg" alt="add a todo" ></a>
+   <a class="icons" href="add.jsp"><img src="images/plus.png" title="ADD" alt="add a todo" ></a> 
    <!--  <a href="delete.jsp"><img src="images/delete.svg" alt="delete a todo" ></a> -->  <!-- To be implemented along all others individually-->
-   <a href="update.jsp"><img src="images/update.svg" alt="update a todo" ></a>
-   <a href="display.jsp"><img src="images/list.svg" alt="display todo" ></a>
+    <a class="icons" href="update.jsp"><img src="images/refresh.png" title="UPDATE" alt="update a todo" ></a> 
+    <a class="icons" href="display.jsp"><img src="images/list.png" title="DISPLAY" alt="display todo" ></a> 
    
-   
-   
+</div>
+<div class="author">
+    <p>Made by</p>
+    <a href="https://twitter.com/1300NehaSingh"><img class="dp" src="images/neha1.jfif" title="Neha Singh" alt="neha singh"></a>
+    <a href="https://twitter.com/ChhabraMaulik"><img class="dp" src="images/me1.jfif" title="Maulik Chhabra" alt="maulik chhabra"></a>
+    <a href="https://twitter.com/Harivansh811"><img class="dp" src="images/harivansh.jfif" title="Harivansh Mathur" alt="harivansh mathur"></a>
+</div>
    
 </body>
 </html>
