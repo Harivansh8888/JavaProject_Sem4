@@ -59,18 +59,21 @@
 
 %>
 
-   ToDo's Are : <br>
-   ToDo     Date      Time <br> 
+   ToDo's Are :
+   <br>
+   ToDo &nbsp; &nbsp; &nbsp; &nbsp;   Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Time <br> 
    
    
    <%
      while(rs.next()){
-		
-		String ToDoData = rs.getString(1) + rs.getString(2) +rs.getString(3)+" \r\n ";
+		String ToDoData = rs.getString(1) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ rs.getString(2) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rs.getString(3)+" \r\n ";
 		out.println(ToDoData+"<br/>");
 		//printing all the entries in database
-	}%>
+		}
+	%>
 	
+	<br>
+	<br>
 	
    Number of rows affected is : <%= count %> <!--Expression tag  -->
 
