@@ -25,32 +25,26 @@
    String uname="root";
    String pass="3780";
 
-  //SQL Queries to be implemented
-  String query1="delete * from todolist where[todo=?, date=?, time=?]"; //taking values from delete.jsp and deleting from DB
-  String query2="select * from todolist"; //showing the rest TODO values        
+         
   %>
 	<h2>ToDo Deleted</h2>
 <%
   //getting parameters 
   String todo = request.getParameter("todo"); 
-  String date = request.getParameter("date");
-  String time = request.getParameter("time");
 
-  
+  //SQL Queries to be implemented
+  String query1="delete from todolist where ToDo ='"+todo+"'"; //taking values from delete.jsp and deleting from DB
+  String query2="select * from todolist"; //showing the rest TODO values 
+
   //1.General initializations
   Class.forName("com.mysql.jdbc.Driver"); //class forname
   con = DriverManager.getConnection(url, uname, pass);
   
-  //Query1 initializations 
-  pst = con.prepareStatement(query1);
-  pst.setString(1, todo);
-  pst.setString(2, date);
-  pst.setString(3, time);
-  int count = pst.executeUpdate();
-  
-  //Query2 initializations
+ 
+  //Query initializations
   st = con.createStatement();
-  rs =st.executeQuery(query2);
+  rs =st.executeQuery(query1);
+  rs = st.executeQuery(query2);
  
 %>
 
@@ -66,8 +60,5 @@
 	  }
   %>
 	
-	
-   Number of rows affected is : <%= count %> <!--Expression tag  -->
-
 </body>
 </html>
