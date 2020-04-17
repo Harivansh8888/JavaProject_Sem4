@@ -48,8 +48,9 @@
  
 %>
 
-   ToDo's Are : <br>
-   ToDo     Date      Time <br> 
+   ToDo's Are :
+   <br>
+   ToDo &nbsp; &nbsp; &nbsp; &nbsp;   Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Time <br>  
    
    
  <%
@@ -59,6 +60,8 @@
         //printing all the entries in database
 	  }
   %>
+  <br>
+  <br>
 	
 </body>
 </html>
