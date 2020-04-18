@@ -6,16 +6,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Delete ToDo Details</title>
+<title>Delete To-Do Details</title>
+<link rel="stylesheet"  type="text/css" href="<%=request.getContextPath()%>/css/styles1.css" />
 </head>
 <body>
  <!--  take input from user about the TODO they want to delete and after clicking submit button they are moved to deleteDB which deletes the data of particular TODO-->
+   
+	<div class="form">
      <form action="deleteDB.jsp"  method="post">
       
-        Enter the To Do : <input type="text" name="todo"><br>
-        <input type="submit">
+        <label>Enter the To-Do :</label><br>
+        <input type="text" name="todo"><br>
+        <input class="submitbtn" type="submit">
       
       </form>
+     </div>
+    
 </body>
 </html>
 

@@ -4,22 +4,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Update ToDo Details Submission</title>
+<title>Update To-Do Details Submission</title>
+<link rel="stylesheet"  type="text/css" href="<%=request.getContextPath()%>/css/styles1.css" />
 </head>
 <body>
-
+   
+	<div class="form">
      <form action="updateDBAll.jsp"  method="post">
-        <p>Enter Information of updated ToDo:</p>
-        Enter the To Do : <input type="text" name="todo"><br>
-        Enter the Updated date for completion (Format example : 5 June 2000) : <input type="text" name="date"><br>
-        Enter the Updated time for completion (Format example : 1:30pm ) : <input type="text" name="time"><br>
-        <input type="submit">
+        <label>Enter information of updated To-Do:</label><br>
+        <label>Enter the To-Do :</label><br>
+        <input type="text" name="todo"><br>
+        <label>Enter the Updated date for completion (Format example : 5 June 2000) :</label><br>
+        <input type="text" name="date"><br>
+        <label>Enter the Updated time for completion (Format example : 1:30pm ) :</label><br>
+        <input type="text" name="time"><br>
+        <input class="submitbtn" type="submit">
      </form>
-           
+     
+     </div>
+      
+     	<div class="footer">
+			<p><b>Important:</b> You cannot change the name of To-Do, if you want to then you can delete existing To-Do and then create new one</p>
+		</div>
+
 </body>
 
-    <footer>
-      {*You cannot change the name of ToDo, if you want to then you can delete existing ToDo and then Create new one.*}
-    </footer>
-      
+    
+    
+    
+
 </html>
