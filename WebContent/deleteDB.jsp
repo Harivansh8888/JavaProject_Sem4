@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" errorPage="errorPage.jsp"%>
     
     <%@ page import="java.sql.*"%>  <%--import database package --%>
     <%@ page import="java.io.*" %>
@@ -34,25 +34,28 @@
    String uname="root";
    String pass="3780";
 
-         
+   //SQL Queries to be implemented
+   String query1="delete from todolist where ToDo =?"; //taking values from delete.jsp and deleting from DB
+   String query2="select * from todolist"; //showing the rest TODO values      
   %>
 	<h2>ToDo Deleted</h2>
 <%
   //getting parameters 
   String todo = request.getParameter("todo"); 
 
-  //SQL Queries to be implemented
-  String query1="delete from todolist where ToDo ='"+todo+"'"; //taking values from delete.jsp and deleting from DB
-  String query2="select * from todolist"; //showing the rest TODO values 
-
+  
   //1.General initializations
   Class.forName("com.mysql.jdbc.Driver"); //class forname
   con = DriverManager.getConnection(url, uname, pass);
   
  
-  //Query initializations
+  //Query1 initializations
+  pst = con.prepareStatement(query1);
+  pst.setString(1,todo);
+  int count = pst.executeUpdate();
+  
+  //Query2 initialization
   st = con.createStatement();
-  rs =st.executeQuery(query1);
   rs = st.executeQuery(query2);
  
 %>
@@ -79,18 +82,18 @@
 	%>
 	</p>
 </div> 		
-  
-  <br>
-  <br>
-  
-  <div class="buttons">
+   <br>
    
-        <p>Wan't to try more :</p>
-        <a href="add.jsp"><button>Add ToDo</button></a>
-        <a href="delete.jsp"><button>Delete ToDo</button></a>
-        <a href="display.jsp"><button>Display ToDo's</button></a>
-        <a href="updateSelection.jsp"><button>Update ToDo</button></a>
+  
+  <div class="bottom">
    
+        <p class="more">Wan't to try more :</p>
+        <div class="button">
+           <a href="add.jsp"><button class="btn1">Add ToDo</button></a>
+           <a href="delete.jsp"><button class="btn2">Delete ToDo</button></a>
+           <a href="display.jsp"><button class="btn3">Display ToDo's</button></a>
+           <a href="updateSelection.jsp"><button class="btn4">Update ToDo</button></a>
+        </div>
    </div>
 	
 </body>

@@ -5,6 +5,15 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.heading{
+	width: 100%;
+	background-color: black;
+	color: white;
+	position: fixed;
+	top: 0;
+	text-align: center;
+}
+
 label {
 	
 	text-align: left;
@@ -26,7 +35,7 @@ p {
 .form {
   font-size: 1.5rem;
   position: relative;
-  top: 150px;
+  top: 200px;
   margin: auto;
   width: 50%;
   border: 3px solid black;

@@ -10,6 +10,15 @@ p {
 	text-align: center;
 }
 
+.heading{
+	width: 100%;
+	background-color: black;
+	color: white;
+	position: fixed;
+	top: 0;
+	text-align: center;
+}
+
 .head{
 	font-size: 1.5rem;
 	text-align: center;
@@ -21,7 +30,6 @@ p {
 	color: white;
 	position: fixed;
 	bottom: 0;
-
 }
 
 button{
@@ -37,7 +45,5 @@ button{
      width: 100%;
      text-align: center;
      margin-top: 10px;
-     padding-top: 200px;
-     	
-	
+     padding-top: 200px;	
 }
