@@ -11,11 +11,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Delete ToDo</title>
+<link rel="stylesheet"  type="text/css" href="<%=request.getContextPath()%>/css/styles3.css" />
 
+  <div class="time">
      <%
          //Date date = new Date();
          out.print( "<h2 align = \"center\">" +(new java.util.Date()).toLocaleString()+"</h2>");
       %>
+  </div> 
 </head>
 <body>
 
@@ -54,20 +57,28 @@
  
 %>
 
-   ToDo's Are :
+<div class="todoentries"> 
    <br>
-   ToDo &nbsp; &nbsp; &nbsp; &nbsp;   Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Time <br>  
+   <p class="head1">ToDo's Are :</p>
    
- 
- <div class="todoentries">  
- <%
-    while(rs.next()){
-    	String ToDoData = rs.getString(1) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ rs.getString(2) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rs.getString(3)+" \r\n ";
-        out.println(ToDoData+"<br/>");
-        //printing all the entries in database
-	  }
-  %>
- </div> 
+   
+   <p class="head2">ToDo &nbsp; &nbsp; &nbsp; &nbsp;   Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Time</p> 
+   
+   <p class="todolist"> 
+   <%
+   while(rs.next()){
+    String todoname = rs.getString(1);
+    String todoDate = rs.getString(2);
+    String todoTime = rs.getString(3);
+   	//String ToDoData = rs.getString(1) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ rs.getString(2) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rs.getString(3)+" \r\n ";
+   	out.println(todoname +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+todoDate+"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+todoTime);
+		out.println("<br/>");
+		
+		//printing all the entries in database
+		}
+	%>
+	</p>
+</div> 		
   
   <br>
   <br>

@@ -5,13 +5,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-label {
-	
-	text-align: left;
-}
-
 p {
 	font-size: 1.2rem;
+	text-align: center;
+}
+
+.head{
+	font-size: 1.5rem;
 	text-align: center;
 }
 
@@ -21,35 +21,23 @@ p {
 	color: white;
 	position: fixed;
 	bottom: 0;
+
 }
 
-.form {
-  font-size: 1.5rem;
-  position: relative;
-  top: 150px;
-  margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 15px;
-}
-
-
-input {
-  width: 15%;
-  padding: 7px;
-  margin: 10px 10px 10px 3px;
-  display: inline-block;
-  border: 2px solid black;
-  box-sizing: border-box;
-  
-}
-
-.submitbtn {
+button{
 	left: 40px;
 	border: 0px solid #ccc;
 	width: 10%;
 	background-color: black;
 	color: white;
+	padding: 10px;
 }
 
-
+.selection{
+     width: 100%;
+     text-align: center;
+     margin-top: 10px;
+     padding-top: 200px;
+     	
+	
+}

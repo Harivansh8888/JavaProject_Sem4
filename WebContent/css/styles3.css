@@ -1,0 +1,54 @@
+body {
+  background-color: #73B1B7	;	
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todoentries{
+	width: 100%;
+     text-align: center;
+     margin-top: 10px;
+     padding-top: 50px;
+	
+}
+
+.time{
+	width: 100%;
+	background-color: black;
+	color: white;
+	position: fixed;
+	top: 0;
+}
+
+.head1,.head2{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.todolist{
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.more{
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.bottom{
+	position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.button{
+   text-align: center;
+   
+}
+
+.btn1,.btn2,.btn3,.btn4{
+	width: 150px;
+  text-align: center;
+  margin:0 auto;
+}

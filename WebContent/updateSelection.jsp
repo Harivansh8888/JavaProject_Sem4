@@ -5,17 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Update type selection</title>
+<link rel="stylesheet"  type="text/css" href="<%=request.getContextPath()%>/css/styles2.css" />
 </head>
 <body>
 
-       <p>Choose between the two update types for the ToDo list</p>
-       
-       <a href="updateSingle.jsp">Update date or time</a>
-       <a href="updateAll.jsp">Update both</a>
-
+     <div class="selection">
+       <p class="head">Choose between the two update types for the ToDo list</p>
+       <br>
+       <br>
+       <a href="updateSingle.jsp"><button>Update date or time</button></a>
+       <a href="updateAll.jsp"><button>Update both</button></a>
+    </div>
+    
+    <div class="footer">
+			<p><b>Important:</b> You cannot change the name of To-Do, if you want to then you can delete existing To-Do and then create new one</p>
+		</div>
 </body>
 
-   <footer>
-      {*You cannot change the name of ToDo, if you want to then you can delete existing ToDo and then Create new one.*}
-    </footer>
+   
 </html>

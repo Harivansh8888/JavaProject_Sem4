@@ -11,12 +11,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Displaying ToDo List </title>
+<link rel="stylesheet"  type="text/css" href="<%=request.getContextPath()%>/css/styles3.css" />  
   
+  <div class="time">
   <%
          //Date date = new Date();
          out.print( "<h2 align = \"center\">" +(new java.util.Date()).toLocaleString()+"</h2>");
       %>
-      
+  </div>  
 </head>
 <body>
 
@@ -53,27 +55,41 @@
   %>
   
   
-  <div class="todoentries">
-  <% //Display todo 
-     while(rs.next()){
- 		String ToDoData = rs.getString(1) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ rs.getString(2) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rs.getString(3)+" \r\n ";
- 		out.println(ToDoData+"<br/>");}
- 		//printing all the entries in database
- 		%>
- 		
- </div> 		
+<div class="todoentries"> 
+   <br>
+   <p class="head1">ToDo's Are :</p>
+   
+   
+   <p class="head2">ToDo &nbsp; &nbsp; &nbsp; &nbsp;   Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Time</p> 
+   
+   <p class="todolist"> 
+   <%
+   while(rs.next()){
+    String todoname = rs.getString(1);
+    String todoDate = rs.getString(2);
+    String todoTime = rs.getString(3);
+   	//String ToDoData = rs.getString(1) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+ rs.getString(2) +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+rs.getString(3)+" \r\n ";
+   	out.println(todoname +"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+todoDate+"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"+todoTime);
+		out.println("<br/>");
+		
+		//printing all the entries in database
+		}
+	%>
+	</p>
+</div> 		
   
   <br>
   <br>
   
-  <div class="buttons">
+  <div class="bottom">
    
-        <p>Wan't to try more :</p>
-        <a href="add.jsp"><button>Add ToDo</button></a>
-        <a href="delete.jsp"><button>Delete ToDo</button></a>
-        <a href="display.jsp"><button>Display ToDo's</button></a>
-        <a href="updateSelection.jsp"><button>Update ToDo</button></a>
-   
+        <p class="more">Wan't to try more :</p>
+        <div class="button">
+           <a href="add.jsp"><button class="btn1">Add ToDo</button></a>
+           <a href="delete.jsp"><button class="btn2">Delete ToDo</button></a>
+           <a href="display.jsp"><button class="btn3">Display ToDo's</button></a>
+           <a href="updateSelection.jsp"><button class="btn4">Update ToDo</button></a>
+        </div>
    </div>
 
 
