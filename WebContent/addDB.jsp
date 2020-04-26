@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" errorPage="errorPage.jsp"%>
     
     <%@ page import="java.sql.*"%>  <%--import database package --%>
     <%@ page import="java.io.*" %>
@@ -93,19 +93,16 @@
 	<br>
 	<br>
 	
-   Number of rows affected is : <%= count %> <!--Expression tag  -->
+  
+   <div class="bottom">
    
-   <br>
-   <br>
-   
-   <div class="buttons">
-   
-        <p>Wan't to try more :</p>
-        <a href="add.jsp"><button>Add ToDo</button></a>
-        <a href="delete.jsp"><button>Delete ToDo</button></a>
-        <a href="display.jsp"><button>Display ToDo's</button></a>
-        <a href="updateSelection.jsp"><button>Update ToDo</button></a>
-   
+        <p class="more">Wan't to try more :</p>
+        <div class="button">
+           <a href="add.jsp"><button class="btn1">Add ToDo</button></a>
+           <a href="delete.jsp"><button class="btn2">Delete ToDo</button></a>
+           <a href="display.jsp"><button class="btn3">Display ToDo's</button></a>
+           <a href="updateSelection.jsp"><button class="btn4">Update ToDo</button></a>
+        </div>
    </div>
    
 
