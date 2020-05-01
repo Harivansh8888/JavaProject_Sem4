@@ -8,11 +8,9 @@
 </head>
 <body>
 
-Error:
-      <%
-         
-      exception.getMessage();
-      %> 
+<h3>Sorry an exception occured!</h3>  
+  
+Exception is: <%= exception %>  
       
 </body>
 </html>
